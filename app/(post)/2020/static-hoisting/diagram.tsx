@@ -1,19 +1,8 @@
 export function Diagram() {
   return (
-    <div className="my-5" style={{ height: "710px" }}>
-      <div
-        style={{
-          position: "absolute",
-          left: 0,
-          width: "100%",
-          background: "#eee",
-          padding: "30px 0 35px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <div className="mobile-diagram-wrapper">
+    <div className="my-5 h-[710px]">
+      <div className="absolute flex sm:justify-center items-center w-full left-0 overflow-x-scroll sm:overflow-x-hidden">
+        <div className="bg-[#eee] py-[35px]">
           <SVG />
         </div>
       </div>
