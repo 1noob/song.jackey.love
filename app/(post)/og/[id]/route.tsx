@@ -4,23 +4,23 @@ import { ImageResponse } from "next/og";
 import { getPosts } from "@/app/get-posts";
 
 // fonts
-const inter300 = fetch(
+const jetbrains300 = fetch(
   new URL(
-    `../../../../node_modules/@fontsource/inter/files/inter-latin-300-normal.woff`,
+    `../../../../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-300-normal.woff`,
     import.meta.url
   )
 ).then(res => res.arrayBuffer());
 
-const inter500 = fetch(
+const jetbrains500 = fetch(
   new URL(
-    `../../../../node_modules/@fontsource/inter/files/inter-latin-500-normal.woff`,
+    `../../../../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff`,
     import.meta.url
   )
 ).then(res => res.arrayBuffer());
 
-const inter600 = fetch(
+const jetbrains600 = fetch(
   new URL(
-    `../../../../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff`,
+    `../../../../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff`,
     import.meta.url
   )
 ).then(res => res.arrayBuffer());
@@ -43,10 +43,10 @@ export async function GET(_req: Request, { params: { id } }) {
     (
       <div
         tw="flex p-10 h-full w-full bg-white flex-col"
-        style={font("Inter 300")}
+        style={font("Jetbrains 300")}
       >
         <header tw="flex text-[36px] w-full">
-          <div tw="font-bold" style={font("Inter 600")}>
+          <div tw="font-bold" style={font("Jetbrains 600")}>
             SONG
           </div>
           <div tw="grow" />
@@ -57,7 +57,7 @@ export async function GET(_req: Request, { params: { id } }) {
           <div tw="flex">
             <div
               tw="bg-gray-100 p-8 text-7xl font-medium rounded-md text-center"
-              style={font("Inter 500")}
+              style={font("Jetbrains 500")}
             >
               {post.title}
             </div>
@@ -77,16 +77,16 @@ export async function GET(_req: Request, { params: { id } }) {
       height: 630,
       fonts: [
         {
-          name: "Inter 300",
-          data: await inter300,
+          name: "Jetbrains 300",
+          data: await jetbrains300,
         },
         {
-          name: "Inter 500",
-          data: await inter500,
+          name: "Jetbrains 500",
+          data: await jetbrains500,
         },
         {
-          name: "Inter 600",
-          data: await inter600,
+          name: "Jetbrains 600",
+          data: await jetbrains600,
         },
         {
           name: "Roboto Mono 400",
