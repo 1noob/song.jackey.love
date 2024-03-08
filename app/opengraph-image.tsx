@@ -6,23 +6,23 @@ import { getPosts } from "@/app/get-posts";
 
 export default async function MainOG() {
   // fonts
-  const inter300 = fetch(
+  const jetbrains300 = fetch(
     new URL(
-      `../node_modules/@fontsource/inter/files/inter-latin-300-normal.woff`,
+      `../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-300-normal.woff`,
       import.meta.url
     )
   ).then(res => res.arrayBuffer());
 
-  const inter600 = fetch(
+  const jetbrains600 = fetch(
     new URL(
-      `../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff`,
+      `../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff`,
       import.meta.url
     )
   ).then(res => res.arrayBuffer());
 
-  const robotoMono400 = fetch(
+  const jetbrains400 = fetch(
     new URL(
-      `../node_modules/@fontsource/roboto-mono/files/roboto-mono-latin-400-normal.woff`,
+      `../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff`,
       import.meta.url
     )
   ).then(res => res.arrayBuffer());
@@ -33,17 +33,17 @@ export default async function MainOG() {
     (
       <div
         tw="flex p-10 h-full w-full bg-white flex-col"
-        style={font("Inter 300")}
+        style={font("Jetbrains 300")}
       >
         <header tw="flex text-[36px] w-full">
-          <div tw="font-bold" style={font("Inter 600")}>
-            Guillermo Rauch
+          <div tw="font-bold" style={font("Jetbrains 600")}>
+            SONG
           </div>
           <div tw="grow" />
-          <div tw="text-[28px]">rauchg.com</div>
+          <div tw="text-[28px]">blog.jackey.love</div>
         </header>
 
-        <main tw="flex mt-10 flex-col w-full" style={font("Roboto Mono 400")}>
+        <main tw="flex mt-10 flex-col w-full" style={font("Jetbrains 400")}>
           <div tw="flex w-full text-[26px] text-gray-400 mb-3">
             <div tw="w-24">date</div>
             <div tw="grow">title</div>
@@ -70,19 +70,19 @@ export default async function MainOG() {
     ),
     {
       width: 1200,
-      height: 630,
+      height: 600,
       fonts: [
         {
-          name: "Inter 300",
-          data: await inter300,
+          name: "Jetbrains 300",
+          data: await jetbrains300,
         },
         {
-          name: "Inter 600",
-          data: await inter600,
+          name: "Jetbrains 600",
+          data: await jetbrains600,
         },
         {
-          name: "Roboto Mono 400",
-          data: await robotoMono400,
+          name: "Jetbrains 400",
+          data: await jetbrains400,
         },
       ],
     }

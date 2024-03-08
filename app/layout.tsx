@@ -1,13 +1,13 @@
 import "./globals.css";
 
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import { themeEffect } from "./theme-effect";
 import { Analytics } from "./analytics";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { doge } from "./doge";
 
-const inter = Inter({ subsets: ["latin"] });
+const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Guillermo Rauch's blog",
@@ -17,7 +17,7 @@ export const metadata = {
     title: "Guillermo Rauchg's blog",
     description:
       "Guillermo Rauch is the CEO and founder of Vercel, a software engineer, and the creator of Next.js, Mongoose, Socket.io and other open source libraries.",
-    url: "https://rauchg.com",
+    url: "https://blog.jackey.love",
     siteName: "Guillermo Rauchg's blog",
   },
   twitter: {
@@ -25,7 +25,7 @@ export const metadata = {
     site: "@rauchg",
     creator: "@rauchg",
   },
-  metadataBase: new URL("https://rauchg.com"),
+  metadataBase: new URL("https://blog.jackey.love"),
 };
 
 export const viewport = {
@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className} antialiased`}
+      className={`${jetBrainsMono.className} antialiased`}
       suppressHydrationWarning={true}
     >
       <head>
