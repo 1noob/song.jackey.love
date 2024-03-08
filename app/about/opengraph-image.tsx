@@ -63,7 +63,7 @@ export default async function AboutOG() {
 
         <footer
           tw="flex w-full justify-center text-2xl text-gray-500"
-          style={font("Roboto Mono 400")}
+          style={font("Jetbrains 400")}
         >
           {posts.length} posts / {commaNumber(viewsSum)} views
         </footer>
