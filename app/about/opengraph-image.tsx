@@ -7,7 +7,7 @@ import commaNumber from "comma-number";
 
 export default async function AboutOG() {
   const avatar = fetch(
-    new URL(`../../public/images/avatar.jpeg`, import.meta.url)
+    new URL(`../../public/images/avatar.jpg`, import.meta.url)
   ).then(res => res.arrayBuffer());
 
   const jetbrains500 = fetch(
@@ -17,9 +17,9 @@ export default async function AboutOG() {
     )
   ).then(res => res.arrayBuffer());
 
-  const robotoMono400 = fetch(
+  const jetbrains400 = fetch(
     new URL(
-      `../../node_modules/@fontsource/roboto-mono/files/roboto-mono-latin-400-normal.woff`,
+      `../../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff`,
       import.meta.url
     )
   ).then(res => res.arrayBuffer());
@@ -48,17 +48,14 @@ export default async function AboutOG() {
               <div tw="text-[64px] mb-7" style={font("Jetbrains 500")}>
                 SONG
               </div>
-              <div tw="flex mb-5" style={font("Roboto Mono 400")}>
-                <span tw="text-gray-400 mr-3">&mdash;</span> CEO and Founder of
-                Vercel
+              <div tw="flex mb-5" style={font("Jetbrains 400")}>
+                <span tw="text-gray-400 mr-3">&mdash;</span>  Major in Computer Science
               </div>
-              <div tw="flex mb-5" style={font("Roboto Mono 400")}>
-                <span tw="text-gray-400 mr-3">&mdash;</span> Creator of Next.js,
-                Socket.IO, Mongoose
+              <div tw="flex mb-5" style={font("Jetbrains 400")}>
+                <span tw="text-gray-400 mr-3">&mdash;</span> ACMer / Fullstack Engineer
               </div>
-              <div tw="flex" style={font("Roboto Mono 400")}>
-                <span tw="text-gray-400 mr-3">&mdash;</span> Lives in San
-                Francisco, CA
+              <div tw="flex" style={font("Jetbrains 400")}>
+                <span tw="text-gray-400 mr-3">&mdash;</span> Lives in Guangdong, China
               </div>
             </div>
           </div>
@@ -81,8 +78,8 @@ export default async function AboutOG() {
           data: await jetbrains500,
         },
         {
-          name: "Roboto Mono 400",
-          data: await robotoMono400,
+          name: "Jetbrains 400",
+          data: await jetbrains400,
         },
       ],
     }
