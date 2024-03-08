@@ -10,14 +10,6 @@ export default async function AboutOG() {
     new URL(`../../public/images/avatar.jpeg`, import.meta.url)
   ).then(res => res.arrayBuffer());
 
-  // fonts
-  const jetbrains300 = fetch(
-    new URL(
-      `../../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-300-normal.woff`,
-      import.meta.url
-    )
-  ).then(res => res.arrayBuffer());
-
   const jetbrains500 = fetch(
     new URL(
       `../../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff`,
@@ -39,7 +31,6 @@ export default async function AboutOG() {
     (
       <div
         tw="flex p-10 h-full w-full bg-white flex-col"
-        style={font("Jetbrains 300")}
       >
         <main tw="flex grow pt-4 w-full justify-center items-center">
           <div tw="flex flex-row">
@@ -85,10 +76,6 @@ export default async function AboutOG() {
       width: 1200,
       height: 600,
       fonts: [
-        {
-          name: "Jetbrains 300",
-          data: await jetbrains300,
-        },
         {
           name: "Jetbrains 500",
           data: await jetbrains500,
