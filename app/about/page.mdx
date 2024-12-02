@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 export const metadata = {
-  title: 'SONG',
-  description: 'An overview of my career',
+  title: "SONG",
+  description: "An overview of my career",
   openGraph: {
-    title: 'About Me',
-    description: 'An overview of my career',
-    images: [{ url: '/about/opengraph-image' }]
-  }
-}
+    title: "About Me",
+    description: "An overview of my career",
+    images: [{ url: "/about/opengraph-image" }],
+  },
+};
 
 # About
 
@@ -48,7 +48,7 @@ export const metadata = {
 
 ## 现实
 
-“我会把你打回现实”，如同 2023 年英雄联盟总决赛四强赛 TheShy 的赛前宣言一样，一场“数学竞赛”把我打回了现实。 
+“我会把你打回现实”，如同 2023 年英雄联盟总决赛四强赛 TheShy 的赛前宣言一样，一场“数学竞赛”把我打回了现实。
 
 18 年的 CCPC 广东省赛，接近半数的数学题，将 ACM 弱校统统打回原形，一题拿铜牌创造省赛历史。回忆起每天晚上看集训队论文，那如影随形的数学证明，工科的尽头是数学，诚不欺我。
 
@@ -64,5 +64,11 @@ export const metadata = {
 
 “那我简单点，选复旦吧。”
 
-<iframe className="w-full rounded-[10px]" height={52} src="https://music.163.com/outchain/player?type=2&id=1876121078&auto=1&height=32"/>
-
+<iframe
+  id="embedPlayer"
+  className="w-full rounded-[10px]"
+  allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+  height={52}
+  src="//music.163.com/outchain/player?type=2&id=1876121078&auto=1&height=32"
+/>
