@@ -36,7 +36,7 @@ module.exports = withMDX({
   headers() {
     return [
       {
-        source: "/images/rauchg-3d4cecf.jpg",
+        source: "/images/avatar.png",
         headers: [
           {
             key: "cache-control",

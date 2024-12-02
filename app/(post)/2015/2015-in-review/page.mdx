@@ -1,0 +1,15 @@
+import { Gallery } from 'app/gallery'
+
+export const metadata = {
+  title: '2015 in Review',
+  description: 'A brief summary of my year organized by different categories.',
+  openGraph: {
+    title: '2015 in Review',
+    description: 'A brief summary of my year organized by different categories.',
+    images: [{ url: '/og/2015-in-review' }],
+  }
+}
+
+<div className="w-screen absolute left-0 bottom-0 top-[200px] mt-5">
+  <Gallery month={"2015"}/>
+</div>
