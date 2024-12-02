@@ -31,6 +31,12 @@ module.exports = withMDX({
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "music.163.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
   headers() {
