@@ -1,38 +1,38 @@
-export const runtime = "edge";
+export const revalidate = 60;
 
 import { ImageResponse } from "next/og";
 import { getPosts } from "@/app/get-posts";
+import { readFileSync } from "fs";
+import { join } from "path";
+
+export async function generateStaticParams() {
+  return (await getPosts()).map(post => ({ id: post.id }));
+}
 
 // fonts
-const jetbrains300 = fetch(
-  new URL(
-    `../../../../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-300-normal.woff`,
-    import.meta.url
-  )
-).then(res => res.arrayBuffer());
+const fontsDir = join(process.cwd(), "fonts");
 
-const jetbrains500 = fetch(
-  new URL(
-    `../../../../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff`,
-    import.meta.url
-  )
-).then(res => res.arrayBuffer());
+const inter300 = readFileSync(
+  join(fontsDir, "inter-latin-300-normal.woff")
+);
 
-const jetbrains600 = fetch(
-  new URL(
-    `../../../../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff`,
-    import.meta.url
-  )
-).then(res => res.arrayBuffer());
+const inter500 = readFileSync(
+  join(fontsDir, "inter-latin-500-normal.woff")
+);
 
-const robotoMono400 = fetch(
-  new URL(
-    `../../../../node_modules/@fontsource/roboto-mono/files/roboto-mono-latin-400-normal.woff`,
-    import.meta.url
-  )
-).then(res => res.arrayBuffer());
+const inter600 = readFileSync(
+  join(fontsDir, "inter-latin-600-normal.woff")
+);
 
-export async function GET(_req: Request, { params: { id } }) {
+const robotoMono400 = readFileSync(
+  join(fontsDir, "roboto-mono-latin-400-normal.woff")
+);
+
+export async function GET(_req: Request, props) {
+  const params = await props.params;
+
+  const { id } = params;
+
   const posts = await getPosts();
   const post = posts.find(p => p.id === id);
   if (!post) {
@@ -43,21 +43,21 @@ export async function GET(_req: Request, { params: { id } }) {
     (
       <div
         tw="flex p-10 h-full w-full bg-white flex-col"
-        style={font("Jetbrains 300")}
+        style={font("Inter 300")}
       >
         <header tw="flex text-[36px] w-full">
-          <div tw="font-bold" style={font("Jetbrains 600")}>
-            SONG
+          <div tw="font-bold" style={font("Inter 600")}>
+            Guillermo Rauch
           </div>
           <div tw="grow" />
-          <div tw="text-[28px]">blog.jackey.love</div>
+          <div tw="text-[28px]">rauchg.com</div>
         </header>
 
         <main tw="flex grow pb-3 flex-col items-center justify-center">
           <div tw="flex">
             <div
               tw="bg-gray-100 p-8 text-7xl font-medium rounded-md text-center"
-              style={font("Jetbrains 500")}
+              style={font("Inter 500")}
             >
               {post.title}
             </div>
@@ -77,20 +77,20 @@ export async function GET(_req: Request, { params: { id } }) {
       height: 630,
       fonts: [
         {
-          name: "Jetbrains 300",
-          data: await jetbrains300,
+          name: "Inter 300",
+          data: inter300,
         },
         {
-          name: "Jetbrains 500",
-          data: await jetbrains500,
+          name: "Inter 500",
+          data: inter500,
         },
         {
-          name: "Jetbrains 600",
-          data: await jetbrains600,
+          name: "Inter 600",
+          data: inter600,
         },
         {
           name: "Roboto Mono 400",
-          data: await robotoMono400,
+          data: robotoMono400,
         },
       ],
     }

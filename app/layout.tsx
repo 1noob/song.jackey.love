@@ -12,12 +12,12 @@ const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 export const metadata = {
   title: "SONG",
   description:
-    "ACMer / Fullstack Engineer",
+    "ACMer / LOLer",
   openGraph: {
     title: "SONG",
     description:
-      "ACMer / Fullstack Engineer",
-    url: "https://blog.jackey.love",
+      "ACMer / LOLer",
+    url: "https://song.jackey.love",
     siteName: "SONG's blog",
   },
   twitter: {
@@ -25,7 +25,7 @@ export const metadata = {
     site: "@zhousongjie",
     creator: "@zhousongjie",
   },
-  metadataBase: new URL("https://blog.jackey.love"),
+  metadataBase: new URL("https://song.jackey.love"),
 };
 
 export const viewport = {

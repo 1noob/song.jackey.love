@@ -9,3 +9,4 @@ dist
 TODO
 .env*.local
 .idea
+.DS_Store
