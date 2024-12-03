@@ -30,13 +30,7 @@ module.exports = withMDX({
         hostname: "images-na.ssl-images-amazon.com",
         port: "",
         pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "music.163.com",
-        port: "",
-        pathname: "/**",
-      },
+      }
     ],
   },
   headers() {
