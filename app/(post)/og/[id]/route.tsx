@@ -12,21 +12,23 @@ export async function generateStaticParams() {
 // fonts
 const fontsDir = join(process.cwd(), "fonts");
 
-const inter300 = readFileSync(
-  join(fontsDir, "inter-latin-300-normal.woff")
+const mono300 = readFileSync(
+  join(fontsDir, "jetbrains-mono-latin-300-normal.woff")
 );
 
-const inter500 = readFileSync(
-  join(fontsDir, "inter-latin-500-normal.woff")
+const mono400 = readFileSync(
+  join(fontsDir, "jetbrains-mono-latin-400-normal.woff")
 );
 
-const inter600 = readFileSync(
-  join(fontsDir, "inter-latin-600-normal.woff")
+
+const mono500 = readFileSync(
+  join(fontsDir, "jetbrains-mono-latin-500-normal.woff")
 );
 
-const robotoMono400 = readFileSync(
-  join(fontsDir, "roboto-mono-latin-400-normal.woff")
+const mono600 = readFileSync(
+  join(fontsDir, "jetbrains-mono-latin-600-normal.woff")
 );
+
 
 export async function GET(_req: Request, props) {
   const params = await props.params;
@@ -43,10 +45,10 @@ export async function GET(_req: Request, props) {
     (
       <div
         tw="flex p-10 h-full w-full bg-white flex-col"
-        style={font("Inter 300")}
+        style={font("Mono 300")}
       >
         <header tw="flex text-[36px] w-full">
-          <div tw="font-bold" style={font("Inter 600")}>
+          <div tw="font-bold" style={font("Mono 600")}>
             SONG
           </div>
           <div tw="grow" />
@@ -57,7 +59,7 @@ export async function GET(_req: Request, props) {
           <div tw="flex">
             <div
               tw="bg-gray-100 p-8 text-7xl font-medium rounded-md text-center"
-              style={font("Inter 500")}
+              style={font("Mono 500")}
             >
               {post.title}
             </div>
@@ -65,7 +67,7 @@ export async function GET(_req: Request, props) {
 
           <div
             tw="mt-5 flex text-3xl text-gray-500"
-            style={font("Roboto Mono 400")}
+            style={font("Mono 400")}
           >
             {post.date} – {post.viewsFormatted} views
           </div>
@@ -77,20 +79,20 @@ export async function GET(_req: Request, props) {
       height: 630,
       fonts: [
         {
-          name: "Inter 300",
-          data: inter300,
+          name: "Mono 300",
+          data: mono300,
         },
         {
-          name: "Inter 500",
-          data: inter500,
+          name: "Mono 500",
+          data: mono500,
         },
         {
-          name: "Inter 600",
-          data: inter600,
+          name: "Mono 600",
+          data: mono600,
         },
         {
-          name: "Roboto Mono 400",
-          data: robotoMono400,
+          name: "Mono 400",
+          data: mono400,
         },
       ],
     }
