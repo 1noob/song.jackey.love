@@ -1,6 +1,11 @@
 {
   "posts": [
     {
+      "id": "12-04",
+      "date": "December 4, 2024",
+      "title": "聪明的人不需要照顾情绪"
+    },
+    {
       "id": "2016-in-review",
       "date": "December 25, 2016",
       "title": "2016 in review"

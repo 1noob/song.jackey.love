@@ -4,7 +4,7 @@ import Data from "app/images.json";
 export async function Gallery({ month }) {
   const gallery = Data[month];
   return (
-    <div className="books grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] px-5 mb-10">
+    <div className="books grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] px-4 mb-10">
       {gallery.map((image, i) => (
         <Photo key={image.url} priority={i < 10} {...image} />
       ))}
