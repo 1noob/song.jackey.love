@@ -1,9 +1,24 @@
 {
   "posts": [
     {
-      "id": "12-04",
-      "date": "December 4, 2024",
-      "title": "聪明的人不需要照顾情绪"
+      "id": "2019-in-review",
+      "date": "December 25, 2019",
+      "title": "2019 in review"
+    },
+    {
+      "id": "2018-in-review",
+      "date": "December 25, 2018",
+      "title": "2018 in review"
+    },
+    {
+      "id": "2018-gdcpc-record",
+      "date": "May 6, 2018",
+      "title": "GDCPC2018 回忆录"
+    },
+    {
+      "id": "2017-in-review",
+      "date": "December 25, 2017",
+      "title": "2017 in review"
     },
     {
       "id": "2016-in-review",
