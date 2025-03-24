@@ -38,21 +38,21 @@ export async function Image({
               res.arrayBuffer()
             )
           );
-        } else {
-          // windows
-          if (navigator.platform.startsWith("Win")) {
-            imageBuffer = await readFile(
-              new URL(
-                join(import.meta.url, "..", "..", "..", "..", "public", src).substring(2)
-              )
-            );
-          }
+        } else  {
           // mac
-          else {
+          if (!navigator.platform.startsWith("Win")) {
             imageBuffer = await readFile(
               new URL(
                 join(import.meta.url, "..", "..", "..", "..", "public", src)
               ).pathname
+            );
+          }
+          // win
+          else {
+            imageBuffer = await readFile(
+              new URL(
+                join(import.meta.url, "..", "..", "..", "..", "public", src).substring(2)
+              )
             );
           }
         }
