@@ -38,23 +38,14 @@ export async function Image({
               res.arrayBuffer()
             )
           );
-        } else  {
-          // mac
-          if (process.env.SYSTEM !== "Win") {
-            imageBuffer = await readFile(
-              new URL(
-                join(import.meta.url, "..", "..", "..", "..", "public", src)
-              ).pathname
-            );
-          }
-          // win
-          else {
-            imageBuffer = await readFile(
-              new URL(
-                join(import.meta.url, "..", "..", "..", "..", "public", src).substring(2)
-              )
-            );
-          }
+        } else {
+          imageBuffer = await readFile(
+            // windows file path
+            process.env.SYSTEM === "windows" ? new URL(
+              join(import.meta.url, "..", "..", "..", "..", "public", src).substring(2)
+            ) : new URL(
+              join(import.meta.url, "..", "..", "..", "..", "public", src)
+            ).pathname);
         }
       }
       const computedSize = sizeOf(imageBuffer);
