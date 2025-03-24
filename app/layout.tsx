@@ -1,13 +1,10 @@
 import "./globals.css";
-
-import { JetBrains_Mono } from "next/font/google";
 import { themeEffect } from "./theme-effect";
 import { Analytics } from "./analytics";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { doge } from "./doge";
-
-const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] });
+import { ChillReunion } from "@/fonts/font";
 
 export const metadata = {
   title: "SONG",
@@ -40,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jetBrainsMono.className} antialiased`}
+      className={`${ChillReunion.variable} font-mono antialiased`}
       suppressHydrationWarning={true}
     >
       <head>
