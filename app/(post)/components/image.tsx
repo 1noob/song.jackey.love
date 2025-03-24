@@ -40,7 +40,7 @@ export async function Image({
           );
         } else  {
           // mac
-          if (!navigator.platform.startsWith("Win")) {
+          if (typeof window !== "undefined" && !navigator.platform.startsWith("Win")) {
             imageBuffer = await readFile(
               new URL(
                 join(import.meta.url, "..", "..", "..", "..", "public", src)
