@@ -40,18 +40,21 @@ export async function Image({
           );
         } else {
           // windows
-          // imageBuffer = await readFile(
-          //   new URL(
-          //     join(import.meta.url, "..", "..", "..", "..", "public", src).substring(2)
-          //   )
-          // );
-
-          // mac
-          imageBuffer = await readFile(
+          if (navigator.platform.startsWith("Win")) {
+            imageBuffer = await readFile(
               new URL(
-              join(import.meta.url, "..", "..", "..", "..", "public", src)
-            ).pathname
-          );
+                join(import.meta.url, "..", "..", "..", "..", "public", src).substring(2)
+              )
+            );
+          }
+          // mac
+          else {
+            imageBuffer = await readFile(
+              new URL(
+                join(import.meta.url, "..", "..", "..", "..", "public", src)
+              ).pathname
+            );
+          }
         }
       }
       const computedSize = sizeOf(imageBuffer);
