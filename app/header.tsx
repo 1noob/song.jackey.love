@@ -7,7 +7,7 @@ export function Header() {
     <header className="flex mb-5 md:mb-10 items-center">
       <Logo />
 
-      <nav className="font-mono text-xs grow justify-end items-center flex gap-1 md:gap-3">
+      <nav className="text-xs grow justify-end items-center flex md:gap-3">
         <ThemeToggle />
 
         <Link
@@ -21,7 +21,7 @@ export function Header() {
           target="_blank"
           className="inline-flex hover:bg-gray-200 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] items-center p-2 rounded-sm transition-[background-color] whitespace-nowrap -mr-2"
         >
-          <TweetIcon style={{ marginRight: 4 }} /> Follow{" "}
+          <TweetIcon style={{ marginRight: 10 }} /> Follow{" "}
           <span className="hidden md:inline">&nbsp;me</span>
         </a>
       </nav>

@@ -4,7 +4,7 @@ import { Analytics } from "./analytics";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { doge } from "./doge";
-import { ChillReunion } from "@/fonts/font";
+import { ChillReunion, UranusPixel } from "@/fonts/font";
 
 export const metadata = {
   title: "SONG",
@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${ChillReunion.variable} font-mono antialiased`}
+      className={`${UranusPixel.variable} font-pixel antialiased`}
       suppressHydrationWarning={true}
     >
       <head>

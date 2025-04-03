@@ -7,8 +7,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-smiley)'],
-        mono: ['var(--font-chill)'],
+        smiley: ['var(--font-smiley)'],
+        chill: ['var(--font-chill)'],
+        pixel: ['var(--font-pixel)'],
       },
     },
   },
