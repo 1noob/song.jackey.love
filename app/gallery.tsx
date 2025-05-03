@@ -34,7 +34,7 @@ function Photo({ url, title, day, priority = false }) {
           <span className="inline-block bg-gray-500 dark:bg-[#222] text-white text-xs py-1 px-2 ml-2 rounded-full whitespace-nowrap">
             {day}
           </span>
-          <span className="inline-block font-bold">{title}</span>
+          <span className="inline-block">{title}</span>
         </span>
       </a>
     </main>

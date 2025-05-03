@@ -5,8 +5,8 @@ export function Footer() {
     <footer className="p-6 pt-3 pb-6 flex text-xs text-center mt-3 dark:text-gray-400 text-gray-500">
       <div className="grow text-left">
         SONG (
-        <A target="_blank" href="https://twitter.com/zhousongjie">
-          @zhousongjie
+        <A target="_blank" href="mailto:song@jackey.love">
+          @周颂杰
         </A>
         )
       </div>

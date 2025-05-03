@@ -29,7 +29,7 @@ export function Header({ posts }: { posts: Post[] }) {
 
   return (
     <>
-      <h1 className="text-2xl font-bold mb-1 dark:text-gray-100">
+      <h1 className="text-2xl mb-1 dark:text-gray-100">
         {post.title}
       </h1>
 
